@@ -1,0 +1,107 @@
+body.dc-body {
+    background: radial-gradient(circle at top, #001529 0%, #050505 100%);
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.dc-header {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    letter-spacing: 10px;
+    margin: 0;
+    color: #fff;
+}
+
+.highlight { color: #0077ff; text-shadow: 0 0 20px #0077ff; }
+
+/* Barre de progression style "Jauge d'énergie" */
+.global-progress-bar {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0%;
+    background: #0077ff;
+    box-shadow: 0 0 15px #0077ff;
+    transition: width 0.5s ease;
+}
+
+/* Sections de films */
+.phase-section { width: 90%; max-width: 900px; margin: 0 auto 50px auto; }
+
+.phase-title {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #0077ff;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+/* Cartes de films style "Dossiers confidentiels" */
+.movie-card {
+    background: rgba(0, 119, 255, 0.05);
+    border: 1px solid rgba(0, 119, 255, 0.2);
+    margin-bottom: 12px;
+    padding: 20px;
+    border-radius: 4px; /* Plus carré pour le côté tech */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+    background: rgba(0, 119, 255, 0.1);
+    border-color: #0077ff;
+    transform: translateX(10px);
+}
+
+.movie-card.watched {
+    border-left: 10px solid #0077ff;
+    background: rgba(0, 119, 255, 0.2);
+}
+
+.check-circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0077ff;
+    margin-right: 20px;
+    position: relative;
+}
+
+.watched .check-circle {
+    background: #0077ff;
+    box-shadow: 0 0 10px #0077ff;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Bouton Retour */
+.back-button {
+    position: fixed; top: 20px; left: 20px; color: #0077ff; text-decoration: none;
+    font-family: 'Orbitron', sans-serif; font-size: 0.8rem;
+    border: 1px solid #0077ff; padding: 10px 15px; z-index: 1000;
+    background: rgba(0, 0, 0, 0.5); transition: 0.3s;
+}
+
+.back-button:hover { background: #0077ff; color: #fff; box-shadow: 0 0 20px #0077ff; }
