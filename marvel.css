@@ -1,0 +1,272 @@
+/* GLOBAL STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 80px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #0d0d0d, #000);
+    border-bottom: 2px solid #ff0000;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ff1a1a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #ff1a1a;
+}
+
+header p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* SECTION TITLES */
+.section-title {
+    margin: 60px 20px 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px red;
+}
+
+/* SLIDER */
+.timeline-row {
+    margin-bottom: 60px;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 20px 20px;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #ff1a1a;
+    border-radius: 10px;
+}
+
+/* MOVIE CARD */
+.card {
+    min-width: 200px;
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ff1a1a55;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px #ff000022;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 25px #ff000055;
+}
+
+/* POSTER IMAGE */
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 1px solid #ff1a1a55;
+}
+
+/* TITLE */
+.card h4 {
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* MISSING SECTION */
+.missing-section {
+    margin-top: 80px;
+    padding: 40px 20px;
+    border-top: 2px solid #ff0000;
+}
+
+.missing-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px red;
+}
+
+.missing-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.missing-card {
+    background: rgba(20, 20, 20, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ff1a1a55;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.missing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff000055;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    opacity: 0.7;
+}
+/* Badge de check */
+.check-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff1a1a;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Style quand la carte est marquée comme vue */
+.card.seen img {
+    filter: grayscale(100%) brightness(40%); /* L'image devient grise et sombre */
+}
+
+.card.seen .check-badge {
+    opacity: 1; /* Le check devient visible */
+}
+
+.card.seen {
+    border-color: #00ff00; /* Optionnel : bordure verte pour le succès */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+.card {
+    position: relative; /* Important pour placer le badge */
+    cursor: pointer;
+}
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-bg.jpg'); /* Ajoute une image de fond si tu veux */
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #ff1a1a;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+/* Barre de progression par section */
+.progress-container {
+    margin: 10px 20px;
+    background: #222;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.progress-bar {
+    background: #ff1a1a;
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px #ff1a1a;
+}
+
+.period-status {
+    font-size: 0.9rem;
+    margin-left: 20px;
+    opacity: 0.8;
+}
+.final-stats {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(0deg, #1a0000, #000);
+    border-top: 2px solid #ff1a1a;
+    margin-top: 50px;
+}
+
+.final-box {
+    background: rgba(255, 0, 0, 0.1);
+    display: inline-block;
+    padding: 30px 60px;
+    border-radius: 20px;
+    border: 1px solid #ff1a1a;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+#final-total-counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff1a1a;
+    display: block;
+}
+
+#final-percentage {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px); /* Flou derrière le bouton, très tendance */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 9999; /* Pour qu'il soit au-dessus de tout */
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}

@@ -1,0 +1,82 @@
+body {
+    background-color: #050505;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-link {
+    color: #e50914; /* Rouge Netflix */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+}
+
+.progress-section {
+    margin-bottom: 30px;
+}
+
+.progress-bar-bg {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.progress-bar-fill {
+    background: #e50914;
+    width: 0%;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    transition: width 0.3s ease;
+}
+
+.tracker-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-card {
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info span {
+    color: #888;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    accent-color: #e50914;
+}

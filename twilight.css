@@ -1,0 +1,63 @@
+body.tw-body {
+    background: linear-gradient(to bottom, #050a09, #101d1a);
+    color: #cbd5d1;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.tw-header { text-align: center; padding: 60px 20px; }
+
+h1 { 
+    font-size: 3rem; 
+    letter-spacing: 12px; 
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.sparkle { color: #9abfb8; font-style: italic; }
+
+.tw-progress-bar {
+    width: 250px; height: 3px; background: rgba(255,255,255,0.1);
+    margin: 20px auto; overflow: hidden;
+}
+
+.fill { 
+    height: 100%; width: 0%; 
+    background: #9abfb8; 
+    box-shadow: 0 0 15px #9abfb8; 
+    transition: width 1s ease-in-out; 
+}
+
+.phase-section { width: 90%; max-width: 800px; margin: 0 auto 40px auto; }
+.phase-title { 
+    color: #9abfb8; 
+    font-size: 1.1rem; 
+    letter-spacing: 4px; 
+    border-bottom: 1px solid rgba(154, 191, 184, 0.3); 
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(154, 191, 184, 0.1);
+    margin-bottom: 10px; padding: 20px;
+    display: flex; align-items: center; cursor: pointer; transition: 0.3s;
+}
+
+.movie-card:hover { background: rgba(154, 191, 184, 0.05); }
+.movie-card.watched { border-left: 5px solid #9abfb8; background: rgba(154, 191, 184, 0.1); }
+
+.check-circle { 
+    width: 18px; height: 18px; border: 1px solid #9abfb8; 
+    border-radius: 50%; margin-right: 20px; 
+}
+
+.watched .check-circle { background: #9abfb8; box-shadow: 0 0 8px #9abfb8; }
+
+.back-button {
+    position: fixed; top: 20px; left: 20px; color: #9abfb8; text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 2px; z-index: 1000;
+}

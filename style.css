@@ -1,0 +1,141 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #050505;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; /* Empêche le scroll sur l'accueil */
+}
+
+.portal-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+}
+
+.portal-header { text-align: center; margin-bottom: 50px; }
+
+.portal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+.highlight { color: #e50914; text-shadow: 0 0 20px rgba(229, 9, 20, 0.5); }
+
+.portal-subtitle {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+.portal-grid {
+    display: flex;
+    gap: 40px;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+}
+
+.portal-card {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Image pour MOVIES */
+.portal-card.movies { 
+    background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Image pour SERIES */
+.portal-card.series { 
+    background-image: url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.2) 100%);
+    transition: background 0.3s;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    z-index: 2;
+}
+
+.card-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.btn-enter {
+    display: inline-block;
+    padding: 10px 25px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* EFFETS AU SURVOL */
+.portal-card:hover {
+    flex: 1.5; /* La carte s'élargit */
+    transform: scale(1.02);
+    border-color: #e50914;
+}
+
+.portal-card:hover .card-overlay {
+    background: linear-gradient(to top, rgba(229, 9, 20, 0.4) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.portal-card:hover .btn-enter {
+    background: #e50914;
+    color: white;
+    box-shadow: 0 0 15px #e50914;
+}
+/* Image pour ANIME */
+.portal-card.anime { 
+    background-image: url('https://images.unsplash.com/photo-1613376023733-0a73315d9b06?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+}
+.portal-card.anime:hover {
+    border-color: #bc13fe; /* Violet néon */
+    box-shadow: 0 0 30px rgba(188, 19, 254, 0.4);
+}
+
+.portal-card.anime .btn-enter {
+    border-color: #bc13fe;
+}
+
+.portal-card.anime:hover .btn-enter {
+    background: #bc13fe;
+}

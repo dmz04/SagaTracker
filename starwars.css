@@ -1,0 +1,48 @@
+body.sw-body {
+    background-color: #000;
+    background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px);
+    background-size: 550px 550px; /* Petit effet d'étoiles simple */
+    color: #eee;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.sw-header { text-align: center; padding: 50px 20px; }
+
+h1 { 
+    font-size: 4rem; 
+    letter-spacing: 10px; 
+    margin: 0; 
+    color: #ffe81f; /* Le jaune Star Wars */
+    text-shadow: 0 0 20px rgba(255, 232, 31, 0.4);
+}
+
+.sw-progress-bar {
+    width: 300px; height: 4px; background: #222;
+    margin: 20px auto; border-radius: 10px; overflow: hidden;
+    border: 1px solid #ffe81f;
+}
+
+.fill { height: 100%; width: 0%; background: #ffe81f; box-shadow: 0 0 10px #ffe81f; transition: width 0.5s ease; }
+
+.phase-section { width: 90%; max-width: 850px; margin: 0 auto 40px auto; }
+.phase-title { color: #ffe81f; text-transform: uppercase; letter-spacing: 3px; border-bottom: 2px solid #ffe81f; padding-bottom: 10px; margin-bottom: 20px; }
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 232, 31, 0.1);
+    margin-bottom: 12px; padding: 18px; border-radius: 8px;
+    display: flex; align-items: center; cursor: pointer; transition: 0.3s;
+}
+
+.movie-card:hover { background: rgba(255, 232, 31, 0.05); transform: scale(1.01); }
+.movie-card.watched { border-color: #ffe81f; background: rgba(255, 232, 31, 0.1); }
+
+.check-circle { width: 20px; height: 20px; border: 2px solid #ffe81f; border-radius: 50%; margin-right: 20px; transition: 0.3s; }
+.watched .check-circle { background: #ffe81f; box-shadow: 0 0 15px #ffe81f; }
+
+.back-button {
+    position: fixed; top: 20px; left: 20px; color: #ffe81f; text-decoration: none;
+    border: 1px solid #ffe81f; padding: 10px 15px; background: black; z-index: 1000; font-size: 0.8rem;
+}

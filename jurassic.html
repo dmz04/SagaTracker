@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InGen | Jurassic Tracker</title>
+    <link rel="stylesheet" href="jurassic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanline"></div>
+    <a href="movies.html" class="back-link">← EXIT TERMINAL</a>
+
+    <header>
+        <div class="header-content">
+            <div class="global-stats">
+                <div class="stat-item">
+                    <span class="label">DATABASE STATUS</span>
+                    <span id="final-percentage" class="value">0%</span>
+                </div>
+                <div class="progress-wrapper">
+                    <div id="main-bar" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="timeline-container"></main>
+
+    <script src="script-jurassic.js"></script>
+</body>
+</html>
