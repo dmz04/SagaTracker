@@ -1,12 +1,12 @@
 const timeline = {
-    "LE PRÉQUEL": [
-        { title: "Hunger Games: La Ballade du serpent et de l'oiseau chanteur" }
+    "THE PREQUEL": [
+        { title: "The Hunger Games: The Ballad of Songbirds and Snakes" }
     ],
-    "LA TRILOGIE ORIGINALE": [
-        { title: "Hunger Games (1)" },
-        { title: "Hunger Games: L'Embrasement" },
-        { title: "Hunger Games: La Révolte, partie 1" },
-        { title: "Hunger Games: La Révolte, partie 2" }
+    "THE ORIGINAL TRILOGY": [
+        { title: "The Hunger Games" },
+        { title: "The Hunger Games: Catching Fire" },
+        { title: "The Hunger Games: Mockingjay – Part 1" },
+        { title: "The Hunger Games: Mockingjay – Part 2" }
     ]
 };
 
