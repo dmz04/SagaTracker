@@ -33,6 +33,14 @@
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
 }
+.coming-soon-content {
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 /* Responsive pour téléphone */
 @media (max-width: 600px) {
