@@ -1,12 +1,12 @@
 const timeline = {
-    "L'HISTOIRE DE BELLA & EDWARD": [
-        { title: "Twilight, Chapitre I : Fascination" },
-        { title: "Twilight, Chapitre II : Tentation" },
-        { title: "Twilight, Chapitre III : Hésitation" }
+    "THE BELLA & EDWARD STORY": [
+        { title: "Twilight" },
+        { title: "The Twilight Saga: New Moon" },
+        { title: "The Twilight Saga: Eclipse" }
     ],
-    "L'ÉTERNITÉ": [
-        { title: "Twilight, Chapitre IV : Révélation (Partie 1)" },
-        { title: "Twilight, Chapitre V : Révélation (Partie 2)" }
+    "ETERNITY": [
+        { title: "The Twilight Saga: Breaking Dawn – Part 1" },
+        { title: "The Twilight Saga: Breaking Dawn – Part 2" }
     ]
 };
 
