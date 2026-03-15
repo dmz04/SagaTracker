@@ -200,3 +200,24 @@ html, body {
     background: #ff0050;
     color: white;
 }
+/* Image pour KDRAMA */
+.portal-card.kdrama { 
+    background-image: url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=870&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Effet survol KDRAMA */
+.portal-card.kdrama:hover {
+    border-color: #3498db; /* Bleu néon */
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.4);
+}
+
+.portal-card.kdrama .btn-enter {
+    border-color: #3498db;
+}
+
+.portal-card.kdrama:hover .btn-enter {
+    background: #3498db;
+    color: white;
+}
