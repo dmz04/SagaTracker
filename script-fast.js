@@ -1,19 +1,20 @@
 const timeline = {
     "THE EARLY DAYS": [
-        { title: "Fast & Furious (2001)" },
-        { title: "The Turbo Charged Prelude (Court-métrage)" },
+        { title: "The Fast and the Furious (2001)" },
+        { title: "The Turbo Charged Prelude (Short Film)" },
         { title: "2 Fast 2 Furious" },
-        { title: "Los Bandoleros (Court-métrage)" },
-        { title: "Fast & Furious 4" }
+        { title: "Better Luck Tomorrow (Optional)" }, // Souvent considéré comme l'origine de Han
+        { title: "Los Bandoleros (Short Film)" },
+        { title: "Fast & Furious (2009)" } // Le 4ème film s'appelle juste comme ça en VO
     ],
-    "THE HEISTS": [
+    "THE HEISTS & TOKYO DRIFT": [
         { title: "Fast Five" },
         { title: "Fast & Furious 6" },
         { title: "The Fast and the Furious: Tokyo Drift" }
     ],
     "THE GLOBAL SAGA": [
         { title: "Furious 7" },
-        { title: "The Fate of the Furious (8)" },
+        { title: "The Fate of the Furious" },
         { title: "Fast & Furious Presents: Hobbs & Shaw" },
         { title: "F9: The Fast Saga" },
         { title: "Fast X" }
