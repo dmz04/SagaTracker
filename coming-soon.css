@@ -1,0 +1,40 @@
+.coming-soon-content {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+}
+
+.coming-soon-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tiktok-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #ff0050; /* Couleur TikTok */
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.tiktok-btn:hover {
+    transform: scale(1.05);
+}
+
+.back-link {
+    color: #888;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 600px) {
+    .coming-soon-content h2 { font-size: 2rem; }
+}
