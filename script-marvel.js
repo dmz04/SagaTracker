@@ -107,16 +107,13 @@ const timeline = {
 
 const container = document.getElementById("timeline");
 
-// 1. Fonction pour tout mettre à jour (Barres locales + Compteur global)
 function updateAllStats() {
     let globalSeen = 0;
     let globalTotal = 0;
 
-    // Mise à jour de chaque section
     document.querySelectorAll('.section-header').forEach(header => {
         const period = header.querySelector('.section-title').textContent;
-        const row = header.nextElementSibling; // La div timeline-row
-        
+        const row = header.nextElementSibling;
         const total = timeline[period].length;
         const seen = row.querySelectorAll('.card.seen').length;
         const percentage = (seen / total) * 100;
@@ -128,7 +125,6 @@ function updateAllStats() {
         globalTotal += total;
     });
 
-    // Mise à jour du compteur final
     const finalCounter = document.getElementById('final-total-counter');
     const finalPercentText = document.getElementById('final-percentage');
     
@@ -139,54 +135,47 @@ function updateAllStats() {
     }
 }
 
-// 2. Génération de la Timeline
-Object.keys(timeline)
-    .sort((a, b) => parseInt(a.split(" ")[0]) - parseInt(b.split(" ")[0]))
-    .forEach(period => {
-        const items = timeline[period];
+Object.keys(timeline).sort((a, b) => parseInt(a.split(" ")[0]) - parseInt(b.split(" ")[0])).forEach(period => {
+    const items = timeline[period];
 
-        // Création du Header avec Barre
-        const sectionHeader = document.createElement("div");
-        sectionHeader.className = "section-header";
-        sectionHeader.innerHTML = `
-            <h2 class="section-title">${period}</h2>
-            <div class="period-status">
-                <span class="status-text">0 / ${items.length} seen</span>
-                <div class="progress-container"><div class="progress-bar"></div></div>
-            </div>
-        `;
-        container.appendChild(sectionHeader);
-
-        const row = document.createElement("div");
-        row.className = "timeline-row";
-        const slider = document.createElement("div");
-        slider.className = "slider";
-
-// Création des cartes
-items.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "card";
-    const filmId = item.title.replace(/\s+/g, '-').toLowerCase();
-
-    if (localStorage.getItem(filmId) === "seen") {
-        card.classList.add("seen");
-    }
-
-    // Ici, j'ai supprimé la balise <img ...>
-    card.innerHTML = `
-        <div class="check-badge">✓</div>
-        <h4>${item.title}</h4>
+    const sectionHeader = document.createElement("div");
+    sectionHeader.className = "section-header";
+    sectionHeader.innerHTML = `
+        <h2 class="section-title">${period}</h2>
+        <div class="period-status">
+            <span class="status-text">0 / ${items.length} seen</span>
+            <div class="progress-container"><div class="progress-bar"></div></div>
+        </div>
     `;
+    container.appendChild(sectionHeader);
 
-    card.addEventListener('click', () => {
-        card.classList.toggle('seen');
-        card.classList.contains('seen') ? 
-            localStorage.setItem(filmId, "seen") : 
-            localStorage.removeItem(filmId);
-        
-        updateAllStats();
+    const row = document.createElement("div");
+    row.className = "timeline-row";
+    const slider = document.createElement("div");
+    slider.className = "slider";
+
+    items.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        const filmId = item.title.replace(/\s+/g, '-').toLowerCase();
+
+        if (localStorage.getItem(filmId) === "seen") {
+            card.classList.add("seen");
+        }
+
+        card.innerHTML = `<div class="check-badge">✓</div><h4>${item.title}</h4>`;
+
+        card.addEventListener('click', () => {
+            card.classList.toggle('seen');
+            card.classList.contains('seen') ? localStorage.setItem(filmId, "seen") : localStorage.removeItem(filmId);
+            updateAllStats();
+        });
+
+        slider.appendChild(card);
     });
 
-    slider.appendChild(card);
+    row.appendChild(slider);
+    container.appendChild(row);
 });
+
 updateAllStats();
