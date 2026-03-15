@@ -1,21 +1,21 @@
 const timeline = {
-    "L'ÈRE DES ANIMAUX FANTASTIQUES": [
-        { title: "Les Animaux Fantastiques (1926)" },
-        { title: "Les Crimes de Grindelwald (1927)" },
-        { title: "Les Secrets de Dumbledore (1932)" }
+    "THE FANTASTIC BEASTS ERA": [
+        { title: "Fantastic Beasts and Where to Find Them (1926)" },
+        { title: "The Crimes of Grindelwald (1927)" },
+        { title: "The Secrets of Dumbledore (1932)" }
     ],
-    "LES ANNÉES POUDLARD (HARRY POTTER)": [
-        { title: "Harry Potter à l'école des sorciers" },
-        { title: "Harry Potter et la Chambre des secrets" },
-        { title: "Harry Potter et le Prisonnier d'Azkaban" },
-        { title: "Harry Potter et la Coupe de feu" },
-        { title: "Harry Potter et l'Ordre du Phénix" },
-        { title: "Harry Potter et le Prince de sang-mêlé" },
-        { title: "Harry Potter et les Reliques de la Mort - Partie 1" },
-        { title: "Harry Potter et les Reliques de la Mort - Partie 2" }
+    "THE HOGWARTS YEARS (HARRY POTTER)": [
+        { title: "Harry Potter and the Philosopher's Stone" },
+        { title: "Harry Potter and the Chamber of Secrets" },
+        { title: "Harry Potter and the Prisoner of Azkaban" },
+        { title: "Harry Potter and the Goblet of Fire" },
+        { title: "Harry Potter and the Order of the Phoenix" },
+        { title: "Harry Potter and the Half-Blood Prince" },
+        { title: "Harry Potter and the Deathly Hallows – Part 1" },
+        { title: "Harry Potter and the Deathly Hallows – Part 2" }
     ],
-    "L'HÉRITAGE": [
-        { title: "Harry Potter et l'Enfant maudit (Pièce/Script)" }
+    "THE LEGACY": [
+        { title: "Harry Potter and the Cursed Child (Stage Play/Script)" }
     ]
 };
 
