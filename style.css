@@ -202,7 +202,7 @@ html, body {
 }
 /* Image pour KDRAMA */
 .portal-card.kdrama { 
-    background-image: url('https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=870&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1542281286-9e8a36bb736d?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
 }
