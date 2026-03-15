@@ -2,15 +2,15 @@ const timeline = {
     "THE PREQUEL ERA": [
         { title: "Episode I: The Phantom Menace" },
         { title: "Episode II: Attack of the Clones" },
-        { title: "The Clone Wars (Série & Film)" },
+        { title: "The Clone Wars (Series/Movie)" },
         { title: "Episode III: Revenge of the Sith" }
     ],
     "REIGN OF THE EMPIRE": [
-        { title: "The Bad Batch (Série)" },
+        { title: "The Bad Batch (Series)" },
         { title: "Solo: A Star Wars Story" },
-        { title: "Obi-Wan Kenobi (Série)" },
-        { title: "Andor (Série)" },
-        { title: "Star Wars Rebels (Série)" },
+        { title: "Obi-Wan Kenobi (Series)" },
+        { title: "Andor (Series)" },
+        { title: "Star Wars Rebels (Series)" },
         { title: "Rogue One: A Star Wars Story" },
         { title: "Episode IV: A New Hope" }
     ],
@@ -18,18 +18,17 @@ const timeline = {
         { title: "Episode V: The Empire Strikes Back" },
         { title: "Episode VI: Return of the Jedi" }
     ],
-    "THE NEW REPUBLIC (Mando-Verse)": [
-        { title: "The Mandalorian (Série)" },
-        { title: "The Book of Boba Fett (Série)" },
-        { title: "Ahsoka (Série)" }
+    "THE NEW REPUBLIC (MANDO-VERSE)": [
+        { title: "The Mandalorian (Series)" },
+        { title: "The Book of Boba Fett (Series)" },
+        { title: "Ahsoka (Series)" }
     ],
-    "THE RISE OF FIRST ORDER": [
+    "THE RISE OF THE FIRST ORDER": [
         { title: "Episode VII: The Force Awakens" },
         { title: "Episode VIII: The Last Jedi" },
         { title: "Episode IX: The Rise of Skywalker" }
     ]
 };
-
 const container = document.getElementById('timeline-container');
 
 function updateStats() {
