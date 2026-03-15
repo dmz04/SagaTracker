@@ -270,3 +270,33 @@ footer {
     background: rgba(255, 255, 255, 0.3);
     transform: translateX(-5px);
 }
+/* Style pour les cases sans image */
+.card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px; /* Donne une hauteur fixe aux cases */
+}
+
+.card.seen {
+    border-color: #e50914; /* Rouge quand coché */
+    background: #250909;
+}
+
+.card h4 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Cache le badge si tu ne veux pas le voir ou adapte sa position */
+.check-badge {
+    display: none; /* Si tu ne veux plus le check */
+}
