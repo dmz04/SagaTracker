@@ -14,10 +14,10 @@ const timeline = {
         { title: "Shazam!" },
         { title: "Birds of Prey" },
         { title: "The Suicide Squad (2021)" },
-        { title: "Peacemaker - Season 1" },
+        { title: "Peacemaker - Season 01" },
         { title: "Black Adam" }
     ],
-    "CHAPTER 04: THE MULTIVERSE & ENDING": [
+    "CHAPTER 04: THE MULTIVERSE & BEYOND": [
         { title: "Shazam! Fury of the Gods" },
         { title: "The Flash" },
         { title: "Blue Beetle" },
