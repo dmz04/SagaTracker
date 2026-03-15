@@ -162,37 +162,31 @@ Object.keys(timeline)
         const slider = document.createElement("div");
         slider.className = "slider";
 
-        // Création des cartes
-        items.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "card";
-            const filmId = item.title.replace(/\s+/g, '-').toLowerCase();
+// Création des cartes
+items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+    const filmId = item.title.replace(/\s+/g, '-').toLowerCase();
 
-            if (localStorage.getItem(filmId) === "seen") {
-                card.classList.add("seen");
-            }
+    if (localStorage.getItem(filmId) === "seen") {
+        card.classList.add("seen");
+    }
 
-            card.innerHTML = `
-                <div class="check-badge">✓</div>
-                <img src="${item.poster}" alt="${item.title}">
-                <h4>${item.title}</h4>
-            `;
+    // Ici, j'ai supprimé la balise <img ...>
+    card.innerHTML = `
+        <div class="check-badge">✓</div>
+        <h4>${item.title}</h4>
+    `;
 
-            card.addEventListener('click', () => {
-                card.classList.toggle('seen');
-                card.classList.contains('seen') ? 
-                    localStorage.setItem(filmId, "seen") : 
-                    localStorage.removeItem(filmId);
-                
-                updateAllStats(); // Recalcule tout au clic
-            });
-
-            slider.appendChild(card);
-        });
-
-        row.appendChild(slider);
-        container.appendChild(row);
+    card.addEventListener('click', () => {
+        card.classList.toggle('seen');
+        card.classList.contains('seen') ? 
+            localStorage.setItem(filmId, "seen") : 
+            localStorage.removeItem(filmId);
+        
+        updateAllStats();
     });
 
-// 3. Lancement initial au chargement de la page
+    slider.appendChild(card);
+});
 updateAllStats();
