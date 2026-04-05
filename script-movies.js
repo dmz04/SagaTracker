@@ -13,3 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200 * index);
     });
 });
+function saveUniverseNote(uniName) {
+    const note = document.getElementById(`rating-${uniName}`).value;
+    localStorage.setItem(`note-saga-${uniName}`, note);
+    alert(`Note pour ${uniName} enregistrée !`);
+}
+
+function loadUniverseNotes() {
+    // Liste de tes sagas
+    const sagas = ['marvel', 'dc', 'starwars', 'harrypotter', 'fast', 'hunger', 'twilight', 'jurassic', 'lotr'];
+    
+    sagas.forEach(saga => {
+        const savedNote = localStorage.getItem(`note-saga-${saga}`);
+        const input = document.getElementById(`rating-${saga}`);
+        if (savedNote && input) {
+            input.value = savedNote;
+        }
+    });
+}
+
+// Charge les notes dès que la page s'affiche
+document.addEventListener('DOMContentLoaded', loadUniverseNotes);
