@@ -183,3 +183,52 @@ body {
     font-weight: bold;
     font-size: 10px;
 }
+/* On s'assure que les infos de la carte sont visibles */
+.uni-info {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style de la petite zone de note */
+.rating-badge {
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    pointer-events: auto; /* Permet de cliquer sur l'input même dans un lien */
+}
+
+.rating-badge input {
+    width: 35px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffd700;
+    color: #ffd700;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+}
+
+.rating-badge .slash {
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.save-btn {
+    background: #ffd700;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+}
