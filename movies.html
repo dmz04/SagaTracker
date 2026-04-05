@@ -58,6 +58,17 @@
     <div class="uni-info"><h2>LOTR</h2></div>
 </a>
     </main>
+    <a href="marvel.html" class="uni-card marvel">
+    <div class="bg-image"></div>
+    <div class="uni-info">
+        <h2>MARVEL</h2>
+        <div class="rating-badge" onclick="event.preventDefault();"> 
+            <input type="number" id="rating-marvel" placeholder="0" min="0" max="10">
+            <span>/10</span>
+            <button onclick="saveUniverseNote('marvel')">OK</button>
+        </div>
+    </div>
+</a>
 
     <script src="script-movies.js"></script>
 </body>
