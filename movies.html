@@ -6,10 +6,12 @@
     <title>Movies Tracker - Choose Your Saga</title>
     <link rel="stylesheet" href="movies.css">
 </head>
-<a href="index.html" class="home-button">
-    <span class="icon">🏠</span> MAIN MENU
-</a>
+
 <body>
+    <a href="index.html" class="home-button">
+        <span class="icon">🏠</span> MAIN MENU
+    </a>
+
     <header class="main-header">
         <h1>MOVIES TRACKER</h1>
         <p>Pick a saga and track your progress</p>
@@ -17,57 +19,117 @@
 
     <main class="universe-grid">
         <a href="marvel.html" class="uni-card marvel">
-            <div class="bg-image"></div> <div class="uni-info"><h2>MARVEL</h2></div></h2></div>
+            <div class="bg-image"></div>
+            <div class="uni-info">
                 <h2>MARVEL</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-marvel" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('marvel')">OK</button>
+                </div>
             </div>
         </a>
 
         <a href="dc.html" class="uni-card dc">
-        <div class="bg-image"></div>
-        <div class="uni-info"><h2>DC UNIVERSE</h2></div>
-    </a>
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>DC UNIVERSE</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-dc" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('dc')">OK</button>
+                </div>
+            </div>
+        </a>
 
-    <a href="starwars.html" class="uni-card starwars">
-        <div class="bg-image"></div>
-        <div class="uni-info"><h2>STAR WARS</h2></div>
-    </a>
+        <a href="starwars.html" class="uni-card starwars">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>STAR WARS</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-starwars" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('starwars')">OK</button>
+                </div>
+            </div>
+        </a>
 
-    <a href="harrypotter.html" class="uni-card harrypotter">
-        <div class="bg-image"></div>
-        <div class="uni-info"><h2>HARRY POTTER</h2></div>
-    </a>
-    <a href="fast.html" class="uni-card fast">
-    <div class="bg-image"></div>
-    <div class="uni-info"><h2>FAST SAGA</h2></div>
-</a>
-<a href="hunger.html" class="uni-card hunger">
-    <div class="bg-image"></div>
-    <div class="uni-info"><h2>HUNGER GAMES</h2></div>
-</a>
-</div>
-<a href="twilight.html" class="uni-card twilight">
-    <div class="bg-image"></div>
-    <div class="uni-info"><h2>TWILIGHT</h2></div>
-</a>
-<a href="jurassic.html" class="uni-card jurassic">
-    <div class="bg-image"></div>
-    <div class="uni-info"><h2>JURASSIC</h2></div>
-</a>
-<a href="lotr.html" class="uni-card lotr">
-    <div class="bg-image"></div>
-    <div class="uni-info"><h2>LOTR</h2></div>
-</a>
+        <a href="harrypotter.html" class="uni-card harrypotter">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>HARRY POTTER</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-harrypotter" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('harrypotter')">OK</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="fast.html" class="uni-card fast">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>FAST SAGA</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-fast" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('fast')">OK</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="hunger.html" class="uni-card hunger">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>HUNGER GAMES</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-hunger" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('hunger')">OK</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="twilight.html" class="uni-card twilight">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>TWILIGHT</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-twilight" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('twilight')">OK</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="jurassic.html" class="uni-card jurassic">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>JURASSIC</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-jurassic" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('jurassic')">OK</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="lotr.html" class="uni-card lotr">
+            <div class="bg-image"></div>
+            <div class="uni-info">
+                <h2>LOTR</h2>
+                <div class="rating-badge" onclick="event.preventDefault();"> 
+                    <input type="number" id="rating-lotr" placeholder="0" min="0" max="10">
+                    <span>/10</span>
+                    <button onclick="saveUniverseNote('lotr')">OK</button>
+                </div>
+            </div>
+        </a>
     </main>
-    <a href="marvel.html" class="uni-card marvel">
-    <div class="bg-image"></div>
-    <div class="uni-info">
-        <h2>MARVEL</h2>
-        <div class="rating-badge" onclick="event.preventDefault();"> 
-            <input type="number" id="rating-marvel" placeholder="0" min="0" max="10">
-            <span>/10</span>
-            <button onclick="saveUniverseNote('marvel')">OK</button>
-        </div>
-    </div>
+
+    <script src="script-movies.js"></script>
+</body>
+</html>
 </a>
 
     <script src="script-movies.js"></script>
